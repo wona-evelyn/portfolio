@@ -22,7 +22,7 @@ nav a.current {
     padding-bottom: 0.1em;
 }
 :root {
-    --color-accent: oklch(65% 50% 0);
+    --color-accent: #6bb9e8;
     accent-color: var(--color-accent);
 }
 
@@ -91,10 +91,14 @@ h6 {
 }
 .resume section {
     margin-block: 2em;
+    padding: 1.25em;
+    border: 1px solid oklch(88% 2% 200);
+    border-radius: 0.75em;
+    background-color: oklch(98% 1% 200);
 }
 
 .resume h2 {
-    color: var(--color-accent);
+    color: #24658a;
     border-bottom: 2px solid var(--color-accent);
     padding-bottom: 0.3em;
     margin-bottom: 0.75em;
@@ -116,4 +120,13 @@ h6 {
 
 .resume time {
     color: #555;
+}
+@media (max-width: 40em) {
+    h1 {
+        font-size: 250%;
+    }
+
+    .resume section {
+        padding: 0.85em;
+    }
 }

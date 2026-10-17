@@ -130,3 +130,60 @@ h6 {
         padding: 0.85em;
     }
 }
+
+:root {
+  color-scheme: light dark;
+}
+
+/* Navigation colors that work in light and dark mode */
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom-color: var(--border-color);
+}
+
+nav a.current {
+  border-bottom-color: var(--border-color);
+}
+
+nav a:hover {
+  border-bottom-color: var(--color-accent);
+  background-color: color-mix(
+    in oklch,
+    var(--color-accent),
+    canvas 85%
+  );
+}
+
+/* Position the theme dropdown */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+}
+
+/* Make the dropdown match the website's font */
+select {
+  font: inherit;
+}
+
+/* Resume colors that adapt to the selected theme */
+.resume section {
+  background-color: light-dark(
+    oklch(98% 1% 200),
+    oklch(24% 2% 200)
+  );
+  border-color: oklch(50% 10% 200 / 40%);
+}
+
+.resume h2 {
+  color: light-dark(#24658a, #6bb9e8);
+}
+
+.resume article + article {
+  border-top-color: oklch(50% 10% 200 / 40%);
+}
+
+.resume time {
+  color: light-dark(#555, #bbb);
+}

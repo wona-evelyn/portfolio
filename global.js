@@ -53,3 +53,70 @@ for (let p of pages) {
 
   nav.append(a);
 }
+
+// Add the theme dropdown.
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+    <label class="color-scheme">
+      Theme:
+      <select>
+        <option value="light dark">Automatic</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </label>
+  `
+);
+
+// Find the theme dropdown.
+// Find the theme dropdown.
+let select = document.querySelector('.color-scheme select');
+
+// Update both the page theme and the dropdown.
+function setColorScheme(colorScheme) {
+  document.documentElement.style.setProperty(
+    'color-scheme',
+    colorScheme
+  );
+
+  select.value = colorScheme;
+}
+
+// Restore the saved preference when the page loads.
+let savedColorScheme =
+  localStorage.getItem('colorScheme') || 'light dark';
+
+setColorScheme(savedColorScheme);
+
+// Apply and save the user's new selection.
+select.addEventListener('input', function (event) {
+  let colorScheme = event.target.value;
+
+  setColorScheme(colorScheme);
+  localStorage.setItem('colorScheme', colorScheme);
+});
+
+// Improve the contact form.
+let form = document.querySelector('form');
+
+form?.addEventListener('submit', function (event) {
+  // Stop the browser's default form submission.
+  event.preventDefault();
+
+  // Read the form fields.
+  let data = new FormData(form);
+  let params = [];
+
+  // Encode spaces and special characters correctly.
+  for (let [name, value] of data) {
+    params.push(
+      `${encodeURIComponent(name)}=${encodeURIComponent(value)}`
+    );
+  }
+
+  // Build the mailto URL and open the email app.
+  let url = `${form.action}?${params.join('&')}`;
+    console.log('Opening email:', url);
+    location.href = url;
+});

@@ -1,0 +1,75 @@
+[
+    {
+        "title": "Improving DonkeyCar CNN Robustness with Data Augmentation",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "UC San Diego DSC 190 team project, Summer 2026. Worked on a three-person team investigating whether an autonomous vehicle's convolutional neural network, trained on midday camera images, could generalize to morning and nighttime driving. Extended DonkeyCar's image augmentation pipeline using Albumentations to address lighting, color, contrast, and motion blur. Compared baseline and augmented models across driving conditions; the strongest models maintained midday performance and partially generalized to nighttime driving. Used Claude Code to help analyze driving images and investigate background interference and image cropping. Tools: Python, DonkeyCar, Albumentations, and Claude Code.",
+        "url": "https://github.com/UCSD-Silberman-Classes-and-Projects/UCSD-DSC190-SUMMER_I-Final_Project-Team_9",
+        "year": 2026
+    },
+    {
+        "title": "Personal Portfolio Website",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "UC San Diego DSC 106 project, October 2026. Created a personal portfolio website to introduce myself, showcase my projects, and share my resume. Built Home, Projects, Contact, and Resume pages connected through a navigation menu. Used semantic HTML and CSS, added a responsive portrait and a contact form that opens the visitor's email app, and published the website using GitHub Pages. Tools: HTML, CSS, GitHub Pages, and GitHub Desktop.",
+        "year": 2026
+    },
+    {
+        "title": "Libero corrupti quae totam.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Perspiciatis, vitae magni quaerat quisquam iste dolore eos animi facere quia atque optio mollitia odio recusandae error odit voluptatem corporis praesentium placeat ratione officiis commodi ipsam ea. Ratione, reprehenderit quia?",
+        "year": 2026
+    },
+    {
+        "title": "Cum at fuga perferendis!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Labore debitis nobis aspernatur? A vero velit at perferendis dignissimos, iure eveniet eius fugit explicabo inventore. Neque similique dicta tempore nisi, molestias beatae animi fuga quo hic rem ipsum aspernatur.",
+        "year": 2026
+    },
+    {
+        "title": "Ipsam maxime aut numquam!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Quibusdam tempore ea, ducimus nisi praesentium nulla! Suscipit nam veniam, corporis excepturi expedita alias perferendis officiis consequuntur, nostrum in facilis amet cupiditate ipsum non quasi quisquam distinctio ad velit! Nemo!",
+        "year": 2026
+    },
+    {
+        "title": "Id vitae voluptatem officiis!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Nam ipsam iure beatae tempore velit provident ad dolorum earum quo. Iusto voluptates deserunt corrupti quis ducimus delectus eveniet at sequi veritatis. Non eveniet distinctio veniam quidem quibusdam porro. Illo?",
+        "year": 2025
+    },
+    {
+        "title": "Sequi culpa libero eius.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Quisquam, eveniet nulla ab ex, deleniti repellendus eum nisi magnam ea perferendis ratione tempore vel accusantium perspiciatis ducimus maiores ipsum recusandae? Porro eum soluta vero quisquam ut temporibus assumenda quis?",
+        "year": 2025
+    },
+    {
+        "title": "Perspiciatis tenetur enim excepturi.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Sapiente at, dolor aliquam velit quos asperiores temporibus vel. Laborum molestias ullam magni ea odit, ab ut accusantium, quia labore facere voluptatibus, obcaecati voluptatem. Consequuntur pariatur rerum magnam dolores ex!",
+        "year": 2025
+    },
+    {
+        "title": "Sed cumque sapiente vel!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Amet, fugit nobis pariatur delectus dolorem aliquid vel culpa non assumenda laboriosam fuga reprehenderit qui est laudantium error, ratione nemo a nam. Et recusandae veniam eveniet voluptatem. Voluptates, incidunt voluptatum.",
+        "year": 2025
+    },
+    {
+        "title": "Sapiente provident veritatis iure.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Animi, sit vel omnis, nostrum natus at inventore ab nam itaque repellat consectetur quae aspernatur ut in deserunt mollitia a beatae! Non hic tenetur, quisquam laudantium vero quis quibusdam rerum.",
+        "year": 2024
+    },
+    {
+        "title": "Aut, pariatur. Enim, iusto?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Corrupti, doloribus modi incidunt eum veniam aliquam nulla, quae animi, ex quibusdam magni unde ab accusamus in ullam commodi alias ratione voluptates nobis repellendus eos quaerat mollitia? Rerum, asperiores modi.",
+        "year": 2024
+    },
+    {
+        "title": "Ratione eaque necessitatibus unde.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Sequi molestias iusto tenetur repellat, facilis officia illo sit delectus placeat impedit cupiditate doloribus qui modi porro, distinctio odit voluptatum eaque hic, explicabo accusantium fugiat amet fuga? Odio, voluptates autem.",
+        "year": 2023
+    }
+]

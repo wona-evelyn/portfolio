@@ -269,3 +269,31 @@ select {
   padding: 0.75em;
   margin-block: 1em;
 }
+
+#projects-plot path {
+  cursor: pointer;
+  transition: opacity 300ms ease;
+}
+
+#projects-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+#projects-plot path.selected {
+  fill: #e6007a;
+}
+
+.legend-item.selected {
+  --color: #e6007a !important;
+  font-weight: bold;
+}
+
+.legend-item {
+  cursor: pointer;
+}
+
+#projects-plot path:focus-visible,
+.legend-item:focus-visible {
+  outline: 2px solid #e6007a;
+  outline-offset: 3px;
+}

@@ -251,3 +251,38 @@ function isCommitSelected(selection, commit, xScale, yScale) {
   return x >= x0 && x <= x1 && y >= y0 && y <= y1;
 }
 
+function renderSelectionCount(selectedCommits) {
+  const count = selectedCommits.length;
+
+  const message = count === 0
+    ? 'No commits selected'
+    : `${count} commit${count === 1 ? '' : 's'} selected`;
+
+  d3.select('#selection-count').text(message);
+}
+
+function renderLanguageBreakdown(selectedCommits) {
+  const container = d3.select('#language-breakdown');
+  container.selectAll('*').remove();
+
+  if (selectedCommits.length === 0) {
+    return;
+  }
+
+  const lines = selectedCommits.flatMap((commit) => commit.lines);
+
+  const breakdown = d3.rollup(
+    lines,
+    (rows) => rows.length,
+    (row) => row.type
+  );
+
+  for (const [language, count] of breakdown) {
+    const proportion = count / lines.length;
+
+    container.append('dt').text(language);
+    container
+      .append('dd')
+      .text(`${count} lines (${d3.format('.1~%')(proportion)})`);
+  }
+}

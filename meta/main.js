@@ -235,6 +235,10 @@ function createBrushSelector(svg, usableArea, commits, xScale, yScale) {
     svg
       .selectAll('.dots circle')
       .classed('selected', (commit) => selectedSet.has(commit));
+
+    renderSelectionCount(selectedCommits);
+    renderLanguageBreakdown(selectedCommits);
+
   }
 }
 

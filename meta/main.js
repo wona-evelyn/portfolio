@@ -193,8 +193,7 @@ function renderScatterPlot(data, commits) {
         d3.select(event.currentTarget).style('fill-opacity', 0.7);
         updateTooltipVisibility(false);
     });
-
-
+    createBrushSelector(svg, usableArea);
 
 }
 
@@ -208,4 +207,19 @@ function updateTooltipPosition(event) {
 
   tooltip.style.left = `${event.clientX + 12}px`;
   tooltip.style.top = `${event.clientY + 12}px`;
+}
+
+function createBrushSelector(svg, usableArea) {
+  const brush = d3.brush().extent([
+    [usableArea.left, usableArea.top],
+    [usableArea.right, usableArea.bottom],
+  ]);
+
+  svg
+    .append('g')
+    .attr('class', 'brush')
+    .call(brush);
+
+  // Keep dots above the brush so hover tooltips still work.
+  svg.select('.dots').raise();
 }

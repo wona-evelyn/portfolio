@@ -386,3 +386,15 @@ dl.info[hidden]:not(:hover, :focus-within) {
   opacity: 0;
   visibility: hidden;
 }
+
+#chart .dots circle.selected {
+  fill: #ff6b6b;
+}
+
+#chart .brush .selection {
+  fill: steelblue;
+  fill-opacity: 0.1;
+  stroke: currentColor;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+}

@@ -193,7 +193,7 @@ function renderScatterPlot(data, commits) {
         d3.select(event.currentTarget).style('fill-opacity', 0.7);
         updateTooltipVisibility(false);
     });
-    createBrushSelector(svg, usableArea);
+    createBrushSelector(svg, usableArea, commits, xScale, yScale);
 
 }
 
@@ -209,17 +209,45 @@ function updateTooltipPosition(event) {
   tooltip.style.top = `${event.clientY + 12}px`;
 }
 
-function createBrushSelector(svg, usableArea) {
-  const brush = d3.brush().extent([
-    [usableArea.left, usableArea.top],
-    [usableArea.right, usableArea.bottom],
-  ]);
+function createBrushSelector(svg, usableArea, commits, xScale, yScale) {
+  const brush = d3
+    .brush()
+    .extent([
+      [usableArea.left, usableArea.top],
+      [usableArea.right, usableArea.bottom],
+    ])
+    .on('start brush end', brushed);
 
   svg
     .append('g')
     .attr('class', 'brush')
     .call(brush);
 
-  // Keep dots above the brush so hover tooltips still work.
   svg.select('.dots').raise();
+
+  function brushed(event) {
+    const selectedCommits = commits.filter((commit) =>
+      isCommitSelected(event.selection, commit, xScale, yScale)
+    );
+
+    const selectedSet = new Set(selectedCommits);
+
+    svg
+      .selectAll('.dots circle')
+      .classed('selected', (commit) => selectedSet.has(commit));
+  }
 }
+
+function isCommitSelected(selection, commit, xScale, yScale) {
+  if (!selection) {
+    return false;
+  }
+
+  const [[x0, y0], [x1, y1]] = selection;
+
+  const x = xScale(commit.datetime);
+  const y = yScale(commit.hourFrac);
+
+  return x >= x0 && x <= x1 && y >= y0 && y <= y1;
+}
+
